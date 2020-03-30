@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Swipe.Web.Models.PostModel
+
+
+    <div class="text-center">
+        <h1 class="display-4">Welcome to Swipe! POC</h1>
+        <h2>By <a href="https://thebrokentest.com/">Maciej Wyrodek</a></h2>
+        <script type='text/javascript' src='https://ko-fi.com/widgets/widget_2.js'></script>
+        <script type='text/javascript'>kofiwidget2.init('Support Me on Ko-fi', '#29abe0', 'X7X5144XE'); kofiwidget2.draw();</script>
+    </div>
+@if (Model == null)
+{
+    <p><em>Loading...</em></p>
+}
+else
+{
+    <table style="width:100%">
+        <tr>
+            <td class="next">
+                <button class="next" onclick="location.href='@Url.Action("Index","Home")'"> Swipe Left</button>
+            </td>
+            <td style="text-align:center ">
+                <h2> @Model.Title</h2>
+                <div ><img class="image" src="@Model.ImageUrl" alt="PostImage" /></div>
+                <div>@Model.ShortDesciption</div>
+            </td>
+
+            <td class="gotoPost"><a href="@Model.Url" target="_blank">Go to Post</a> </td>
+        </tr>
+    </table>
+    
+
+}
+
+

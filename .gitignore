@@ -137,6 +137,9 @@ _TeamCity*
 .axoCover/*
 !.axoCover/settings.json
 
+#rider files
+
+**/.idea/*
 # Visual Studio code coverage results
 *.coverage
 *.coveragexml
